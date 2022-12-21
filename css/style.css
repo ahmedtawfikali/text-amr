@@ -1,0 +1,337 @@
+
+/* end */
+@media (max-width: 767px) {
+  .text .container p {
+    font-size: 10px;
+    padding: 5px 5px;
+    margin: 30px;
+  }
+}
+
+/* start-main titl */
+@media (max-width: 767px) {
+  .main-title {
+    padding: 5px 10px;
+    font-size: 8px;
+    margin: 50px auto;
+  }
+}
+
+.main-title {
+  position: relative;
+  border: 2px solid black;
+  padding: 10px 20px;
+  width: fit-content;
+  margin: 100px auto;
+  z-index: 1;
+  transition: var(--maintransiton);
+  background-color: white;
+}
+
+.main-title::before,
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-image: var(--liner);
+  border-radius: 50%;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.main-title::before {
+  left: -30px;
+}
+
+.main-title::after {
+  right: -30px;
+}
+
+.main-title:hover::before {
+  z-index: -1;
+  animation: left 1s linear forwards;
+}
+
+.main-title:hover::after {
+  z-index: -1;
+  animation: right 1s linear forwards;
+}
+
+.main-title a {
+  color: black;
+}
+
+@keyframes left {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  100% {
+    border-radius: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+  }
+}
+
+@keyframes right {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  100% {
+    border-radius: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* end */
+@media (max-width: 767px) {
+  .text .container p {
+    font-size: 10px;
+    padding: 5px 5px;
+    margin: 30px;
+  }
+}
+
+.text {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--second-coloe);
+}
+
+.text .container h2 {
+  padding: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+}
+
+.text .container p {
+  text-align: center;
+  padding: 15px 0;
+  line-height: 1.5;
+  color: #0000008a;
+}
+
+/*  */
+
+/* <!-- start-global  --> */
+.global {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--second-coloe);
+}
+
+.global .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.global .container .box {
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.global .box .fa-plane {
+  font-size: 20px;
+  color: var(--lapny);
+  padding: 10px 0;
+  transition: var(--maintransiton);
+}
+
+.global .box:hover .fa-plane {
+  transform: translateX(100px);
+}
+
+.global .container .box p {
+  text-align: center;
+  padding: 15px 0;
+  line-height: 1.5;
+  color: #0000008a;
+}
+
+.global .container .box h3 {
+  font-size: 15px;
+  font-weight: 50;
+  color: var(--back-color);
+  padding: 10px 0;
+}
+
+.box {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+}
+
+.box h1 {
+  text-align: center;
+  padding: 50px 0;
+
+}
+
+.box .container .card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.box .container p {
+  width: 400px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.72);
+  padding: 30px 0;
+  font-weight: 100;
+
+}
+
+.box .container h2 {
+  color: var(--blacsh-colo);
+  font-weight: 100;
+  font-size: 15px;
+}
+
+@media (max-width:767px) {
+  .box .container .card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .box .container p {
+    width: 333PX;
+  }
+}
+
+img {
+  max-width: 100%;
+
+}
+
+
+/*popular  */
+.popular {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--second-coloe);
+}
+
+.popular .container {
+  text-align: center;
+}
+
+.popular .container h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 50px 0;
+  font-family: initial;
+}
+
+@media (max-width: 767px) {
+  .popular .container img {
+    width: 325px;
+    height: 148px;
+  }
+}
+
+/* INSTAGRAm */
+.INSTAGRAm {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--second-coloe);
+}
+
+.INSTAGRAm p {
+  text-align: center;
+  font-size: 30px;
+  padding: 70px 0;
+  font-family: ui-serif;
+  font-weight: bold;
+}
+
+.INSTAGRAm .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.INSTAGRAm .container img {
+  border-radius: 30px;
+  transition: var(--maintransiton);
+}
+
+
+
+.INSTAGRAm .paly {
+  position: relative;
+}
+
+.INSTAGRAm .paly i {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  font-size: 50px;
+  color: white;
+  color: var(--lapny);
+
+}
+
+.INSTAGRAm .container .play {
+  position: relative;
+}
+
+.INSTAGRAm .container .play i {
+  position: absolute;
+ color: transparent;
+ left: 42%;
+  top: 34%;
+  font-size: 60px;
+transition: .5S;
+}
+
+.INSTAGRAm .container .play:hover i{
+  transform: rotate(360deg);
+  color:var(--lapny);
+
+}
+
+
+.link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--second-coloe);
+}
+
+.link .container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link .container li {
+  padding: 10px;
+  font-size: 40px;
+  transition: 1s;
+}
+
+.link .container .fa-brands {
+  color:var(--lapny);
+}
+
+.link .container li:hover {
+  font-size: 47px;
+}
+
